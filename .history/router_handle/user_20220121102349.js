@@ -18,7 +18,6 @@ exports.regUser = (req, res) => {
   const sqlStr = 'select * from ev_users where username = ?'
   db.query(sqlStr, userInfo.username,(err, result) => {
     if(err) return res.cc(err)
-    console.log(result)
     if(result.length > 0){
       return res.send({status: 1,message: '用户名被占用，请更换'})
     }
