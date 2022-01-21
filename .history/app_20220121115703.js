@@ -12,7 +12,6 @@ app.use((req,res,next) => {
     //status默认值为1，表示失败的情况
     //err的值可能是一个错误对象，也可能是一个错误的字符串
     console.log('wobeidiaoyongle');
-    console.log(err.message);
     res.send({
       status,
       message:err instanceof Error ? err.message:err
